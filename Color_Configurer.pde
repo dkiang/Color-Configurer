@@ -68,20 +68,20 @@ void loop()                     // run over and over again
 
 void changeColors() // In this mode, the buttons mix differing amounts of r, g, and b.
 {
-  CheckButtonsDown();
+  CheckButtonsPress();
   if (Button_A)
   {
     changeColorsMode = !changeColorsMode; // flip modes if Button A is pressed
   }
   if (Button_Left)
     r++;
-    if (r > 255) r = 255; // Keeps this from exceeding the 255 limit.
+    if (r > 15) r = 15; // Keeps this from exceeding the 255 limit.
   if (Button_Up)
     g++;
-    if (g > 255) g = 255;
+    if (g > 15) g = 15;
   if (Button_Right)
     b++;
-    if (b > 255) b = 255;
+    if (b > 15) b = 15;
   if (Button_B) // Resets all values to zero.
   {
     r = 0;
